@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [AppComponent, ProductsComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule],
+  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatTableModule],
   providers: [],
   bootstrap: [AppComponent],
 })
