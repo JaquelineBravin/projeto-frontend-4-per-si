@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, } from '@angular/core';
 import { PeriodicElement } from 'src/app/model/product.model';
+
 
 @Component({
   selector: 'app-products',

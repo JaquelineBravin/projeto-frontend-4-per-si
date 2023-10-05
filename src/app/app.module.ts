@@ -14,13 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogModule,
-} from '@angular/material/dialog';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {NgFor} from '@angular/common';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -40,9 +37,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
-    MatDialogModule,
     FormsModule,
-    MatCheckboxModule,
+    MatRadioModule,
+    NgFor,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

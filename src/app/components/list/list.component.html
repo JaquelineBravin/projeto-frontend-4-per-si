@@ -16,16 +16,20 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Unit of measurement</mat-label>
-    <input matInput placeholder="measure" value="" />
-  </mat-form-field>
+    <mat-select>
+      <mat-option *ngFor="let unit of units" [value]="unit.value">
+        {{unit.viewValue}}
+      </mat-option>
+    </mat-select>  </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Provider</mat-label>
     <input matInput placeholder="Provider" value="" />
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Active</mat-label>
-    <input matInput placeholder="Active" value="" />
-  </mat-form-field>
+  <mat-radio-group aria-label="Select an option">
+    <mat-label>Select an option:</mat-label>
+    <mat-radio-button value="1">Active</mat-radio-button>
+    <mat-radio-button value="2">Not active</mat-radio-button>
+  </mat-radio-group>
 </form>
