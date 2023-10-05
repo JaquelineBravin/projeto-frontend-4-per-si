@@ -20,7 +20,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'H',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 2,
@@ -29,7 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'He',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 3,
@@ -38,7 +38,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'Li',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 4,
@@ -47,7 +47,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'Be',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 5,
@@ -56,7 +56,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'B',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 6,
@@ -65,7 +65,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'C',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 7,
@@ -74,7 +74,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'N',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 8,
@@ -83,7 +83,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'O',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 9,
@@ -92,7 +92,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'F',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
   {
     position: 10,
@@ -101,7 +101,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     inventory: 'Ne',
     measure: 'L',
     provider: 'AWS',
-    active: 'YES',
+    active: '',
   },
 ];
 @Component({
