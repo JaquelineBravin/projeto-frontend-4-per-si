@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
+import { ListComponent } from 'src/app/components/list/list.component';
 export interface PeriodicElement {
   description: string;
   position: number;
@@ -108,6 +110,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent {
+  @ViewChild(MatTable)
+  table!: MatTable<any>;
   displayedColumns: string[] = [
     'position',
     'description',
@@ -118,4 +122,25 @@ export class ProductsComponent {
     'active',
   ];
   dataSource = ELEMENT_DATA;
+
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(element: PeriodicElement | null): void {
+    const dialogRef = this.dialog.open(ListComponent, {
+      width: '250px',
+      data:
+        element === null
+          ? {
+              description: null,
+            }
+          : element,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result !== undefined) {
+        this.dataSource.push(result);
+        this.table.renderRows();
+      }
+    });
+  }
 }

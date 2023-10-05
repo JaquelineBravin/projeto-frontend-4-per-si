@@ -1,1 +1,43 @@
-<p>list works!</p>
+<h1 *ngIf="!isChange" mat-dialog-title>Create Element</h1>
+
+<div class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="data.position" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Price</mat-label>
+    <input matInput placeholder="Price" value="" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Inventory</mat-label>
+    <input matInput placeholder="Inventory" value="" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Unit of measurement</mat-label>
+    <input matInput placeholder="measure" value="" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Provider</mat-label>
+    <input matInput placeholder="Provider" value="" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Active</mat-label>
+    <input matInput placeholder="Active" value="" />
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    *ngIf="!isChange"
+    [mat-dialog-close]="data"
+    cdkFocusInitial
+    color="primary"
+  >
+    Create
+  </button>
+</div>
