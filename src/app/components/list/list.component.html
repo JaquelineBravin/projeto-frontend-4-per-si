@@ -1,9 +1,7 @@
-<h1 *ngIf="!isChange" mat-dialog-title>Create Element</h1>
-
-<div class="example-form">
+<form class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>Description</mat-label>
-    <input matInput [(ngModel)]="data.position" />
+    <input matInput />
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
@@ -30,14 +28,4 @@
     <mat-label>Active</mat-label>
     <input matInput placeholder="Active" value="" />
   </mat-form-field>
-
-  <button
-    mat-raised-button
-    *ngIf="!isChange"
-    [mat-dialog-close]="data"
-    cdkFocusInitial
-    color="primary"
-  >
-    Create
-  </button>
-</div>
+</form>
