@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ConnectionPositionPair } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -8,12 +9,23 @@ interface Unit {
   value: string;
   viewValue: string;
 }
+=======
+import { Component } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+>>>>>>> bbcfef2ad4eb0c4ce7973b71ffafa8a069b11beb
+
+interface Unit {
+  value: string;
+  viewValue: string;
+}
+
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
 })
+<<<<<<< HEAD
 export class ListComponent implements OnInit {
   constructor() {}
 
@@ -42,4 +54,13 @@ export class ListComponent implements OnInit {
 
     productsList;
   }
+=======
+
+export class ListComponent {
+  units: Unit[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
+>>>>>>> bbcfef2ad4eb0c4ce7973b71ffafa8a069b11beb
 }
