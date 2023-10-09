@@ -14,16 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
-<<<<<<< HEAD
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
-=======
-import {MatRadioModule} from '@angular/material/radio';
-import {NgFor} from '@angular/common';
-import {MatSelectModule} from '@angular/material/select';
-
->>>>>>> bbcfef2ad4eb0c4ce7973b71ffafa8a069b11beb
 
 @NgModule({
   declarations: [
@@ -44,15 +37,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatDividerModule,
     MatButtonModule,
     FormsModule,
-<<<<<<< HEAD
     MatSelectModule,
     ReactiveFormsModule,
     MatRadioModule,
-=======
-    MatRadioModule,
-    NgFor,
-    MatSelectModule
->>>>>>> bbcfef2ad4eb0c4ce7973b71ffafa8a069b11beb
   ],
   providers: [],
   bootstrap: [AppComponent],
