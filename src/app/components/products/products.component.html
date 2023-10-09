@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="mat-elevation-z8">
+    <ng-container>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Inventory</th>
+          <th>Provider</th>
+          <th>Unit of measurement</th>
+          <th>Active</th>
+        </tr>
+      </thead>
+
+      <tbody class="tbody">
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.description }}</td>
+          <td>{{ produto.price }}</td>
+          <td>{{ produto.inventory }}</td>
+          <td>{{ produto.provider }}</td>
+          <td>{{ produto.measure }}</td>
+          <td>{{ produto.active }}</td>
+        </tr>
+      </tbody>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

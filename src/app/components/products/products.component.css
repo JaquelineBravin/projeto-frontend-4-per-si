@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+
+.container {
+  padding: 50px;
+}
+
+.tbody {
+  vertical-align: middle;
+}
+
+table {
+  text-align: center;
+}
