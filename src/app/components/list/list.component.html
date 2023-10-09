@@ -1,31 +1,48 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Description</mat-label>
-    <input matInput />
-  </mat-form-field>
+<div class="container">
+  <form [formGroup]="addItem" (ngSubmit)="saveData()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input matInput required formControlName="description" />
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Price</mat-label>
-    <input matInput placeholder="Price" value="" />
-  </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Price</mat-label>
+      <input type="number" matInput required formControlName="price" />
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Inventory</mat-label>
-    <input matInput placeholder="Inventory" value="" />
-  </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Inventory</mat-label>
+      <input type="number" matInput formControlName="inventory" />
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Unit of measurement</mat-label>
-    <input matInput placeholder="measure" value="" />
-  </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Unit of measurement</mat-label>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Provider</mat-label>
-    <input matInput placeholder="Provider" value="" />
-  </mat-form-field>
+      <select matNativeControl required formControlName="measure">
+        <option value="miliGrama">mg</option>
+        <option value="grama">g</option>
+        <option value="kiloGrama">Kg</option>
+        <option value="miliLitro">ml</option>
+        <option value="Litro">L</option>
+        <option value="Unidade" selected>Unidade</option>
+      </select>
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Active</mat-label>
-    <input matInput placeholder="Active" value="" />
-  </mat-form-field>
-</form>
+    <mat-form-field class="example-full-width">
+      <mat-label>Provider</mat-label>
+      <input matInput formControlName="provider" />
+    </mat-form-field>
+
+    <mat-radio-group
+      aria-label="Select an option"
+      required
+      formControlName="active"
+    >
+      <mat-label>Select an option:</mat-label>
+      <mat-radio-button value="Active" selected>Active</mat-radio-button>
+      <mat-radio-button value="Not active">Not active</mat-radio-button>
+    </mat-radio-group>
+    <br />
+    <button mat-fab type="submit">Save</button>
+  </form>
+</div>

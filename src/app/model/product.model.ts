@@ -1,8 +1,7 @@
-export interface PeriodicElement {
+export interface IProduct {
   description: string;
-  position: number;
   price: number;
-  inventory: string;
+  inventory: number;
   measure: string;
   provider: string;
   active: string;
